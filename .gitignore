@@ -1,36 +1,58 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+# ignore folders and files related to dependecies
+#ignore all the dependdencies for your project. can be reinstalled
+/node_modules 
+#both these files are related to plug n play which 
+#changes the speed of dependency installation
 /.pnp
 .pnp.js
+#stores the installation state of yarn packages
 .yarn/install-state.gz
 
 # testing
+#the coverage directory is usually temporary as its regenerated
+#coverage is a metric that measures the percentage of code that is executed during automated tests
 /coverage
 
 # next.js
+#contains files related to build of nextjs application
+#generated during build and not meant to be modified manually
 /.next/
+#usually stores final production build
 /out/
 
 # production
+#usually stores the final production build
 /build
 
 # misc
+#this ignores macOS files that are not wanted in the repository
 .DS_Store
+#ignoringpem files prevents them from being tracked by git, which is important
+#for security reasons, as these files may contain sensitive information
 *.pem
 
 # debug
+#debug logs contain debugging information and error messages
+#ignoring these files prevents these files from being tracked by git
 npm-debug.log*
 yarn-debug.log*
+#these files contain error messages
 yarn-error.log*
 
 # local env files
+#env files store configuration variables for app which may be private
+#local means file is specific to your local dev env
 .env*.local
 
 # vercel
+#used to store configuration and deplyment settings specific to Vercel
 .vercel
 
 # typescript
+#contains info about ts build
 *.tsbuildinfo
+#contains type definitions for nextjs project, specific to the project
 next-env.d.ts

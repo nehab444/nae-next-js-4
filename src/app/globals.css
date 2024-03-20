@@ -1,33 +1,42 @@
+/* Use Tailwind CSS base styles */
 @tailwind base;
+
+/* Include Tailwind CSS components */
 @tailwind components;
+
+/* Include Tailwind CSS utility classes */
 @tailwind utilities;
 
+/* Define custom CSS variables for colors */
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0; /* RGB values for the foreground color (black) */
+  --background-start-rgb: 214, 219, 220; /* RGB values for the start of the background gradient (light gray) */
+  --background-end-rgb: 255, 255, 255; /* RGB values for the end of the background gradient (white) */
 }
 
+/* Media query for dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255; /* Change the foreground color to white in dark mode */
+    --background-start-rgb: 0, 0, 0; /* Change the background gradient start color to black in dark mode */
+    --background-end-rgb: 0, 0, 0; /* Change the background gradient end color to black in dark mode */
   }
 }
 
+/* Apply the custom colors to the body */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: rgb(var(--foreground-rgb)); /* Set text color to the custom foreground color */
+  background: linear-gradient( /* Apply a linear gradient background */
       to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
+      transparent, /* Transparent color at the top */
+      rgb(var(--background-end-rgb)) /* End color of the background gradient */
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); /* Start color of the background gradient */
 }
 
+/* Define a custom utility class */
 @layer utilities {
   .text-balance {
-    text-wrap: balance;
+    text-wrap: balance; /* Apply balanced text wrapping */
   }
 }

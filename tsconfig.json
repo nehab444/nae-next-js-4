@@ -1,26 +1,48 @@
 {
+  // TypeScript compiler options
   "compilerOptions": {
+    // Target the DOM (document object model) and ESNext features (latest js features),
     "lib": ["dom", "dom.iterable", "esnext"],
+    // Allow JavaScript files to be compiled
     "allowJs": true,
+    // Skip type checking of declaration files which are prob alr well-typed
+    // reduces time to compile
     "skipLibCheck": true,
+    // Enable strict type checking
     "strict": true,
+    // Do not emit output files
+    // just checks for errors 
     "noEmit": true,
+    // Enable ES module interoperability which helps manage different module formats
     "esModuleInterop": true,
+    // enables you to use ecmascript (standard for js) features
     "module": "esnext",
+    // Specify the module resolution strategy
+    ///reduces the number of requests needed to lpad a web page
     "moduleResolution": "bundler",
+    // Enable JSON module resolution
+    //simplifies module imports
     "resolveJsonModule": true,
+    // Enable isolated modules to improve incremental builds
+    //only checks for errors not module import errors
     "isolatedModules": true,
+    // ts will keep js as part of the output code
     "jsx": "preserve",
+    // Enable incremental compilation leading to faster build times
     "incremental": true,
+    // Specify the plugins to use (in this case, just "next")
     "plugins": [
       {
         "name": "next"
       }
     ],
+    // Map paths to their corresponding locations
     "paths": {
       "@/*": ["./src/*"]
     }
   },
+  // Include specific files and directories for compilation
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  // Exclude certain directories from compilation
   "exclude": ["node_modules"]
 }

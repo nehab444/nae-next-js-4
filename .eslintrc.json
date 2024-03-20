@@ -1,3 +1,7 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals" //By extending the core web vitals configuration, 
+  //you're essentially telling Next.js to use its built-in settings for monitoring 
+  //and reporting these core web vitals metrics for your application. This can help you 
+  //understand how well your website is performing and identify areas for improvement in terms 
+  //of user experience and performance.
 }
