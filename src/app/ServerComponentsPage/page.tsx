@@ -8,7 +8,7 @@ const ServerComponentsPage = () => { // Define the ServerComponentsPage function
         <h1 className="text-4xl font-bold text-gray-800 mb-6 text-center">Server Components in Next.js</h1> {/* Heading */}
         <div className="bg-gradient-to-r from-purple-500 to-blue-500 h-1 w-24 mx-auto mb-6 rounded-full"></div> {/* Div for gradient line */}
         <p className="text-lg text-gray-800 mb-8 leading-relaxed"> {/* Paragraph */}
-          Server components in Next.js allow you to render parts of your website on the server instead of the client's browser. This can improve performance because the server can pre-render content, reducing the amount of work the browser needs to do. It can also enable features like streaming updates, where parts of the page can be updated without needing a full page reload.
+          Server components in Next.js allow you to render parts of your website on the server instead of the client&apos;s browser. This can improve performance because the server can pre-render content, reducing the amount of work the browser needs to do. It can also enable features like streaming updates, where parts of the page can be updated without needing a full page reload.
         </p>
         <Link href="/"> {/* Link component to navigate back to the home page */}
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"> {/* Button with blue background, white text, padding, and rounded corners */}
